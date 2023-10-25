@@ -5,6 +5,7 @@ class SaleDetailsDTO{
     public $id;
     public $product; // fk tabla products
     public $amount; // double
+    public $invoice;
 
     public function getId() {
         return $this->id;
@@ -28,6 +29,14 @@ class SaleDetailsDTO{
 
     public function setAmount($amount){
         $this->amount = $amount;
+    }
+
+    public function getInvoice(){
+        return $this->invoice;
+    }
+
+    public function setInvoide($invoice){
+        $this->invoice = $invoice;
     }
 
 }

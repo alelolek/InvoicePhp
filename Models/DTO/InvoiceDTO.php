@@ -12,7 +12,7 @@ class InvoiceDTO{
     public $client; // tipo clientdto FK
     public $product; //tipo productdto FK
     public $qrInvoice; //qr es un string ejempo -> 
-    public $invoiceDetails; //tipo  FK
+    public $saleDetails; //tipo  FK
 
     // Métodos set y get para $id
     public function setId($id) {
@@ -120,6 +120,14 @@ class InvoiceDTO{
 
     public function getQrInvoice() {
         return $this->qrInvoice;
+    }
+
+    public function setSaleDetails($saleDetails) {
+        $this->saleDetails = $saleDetails;
+    }
+
+    public function getSaleDetailsQrInvoice() {
+        return $this->saleDetails;
     }
 
     

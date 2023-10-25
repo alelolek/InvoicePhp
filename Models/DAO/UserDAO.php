@@ -29,28 +29,5 @@
         }
         
         
-
-        
-          // public function getAllUsers() {
-        //     echo "dentro de la base de datos";
-        //     $usersList = array();
-        //     $sql = "SELECT * FROM Users";
-        //     $statement = $this->connection->prepare($sql);
-        //     $statement->execute();
-        //     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-        
-        //     foreach ($results as $result) {
-        //         // $user = array(
-        //         //     'Username' => $result['Username'],
-        //         //     'Password' => $result['Password']
-        //         // );
-        //         // $usersList[] = $user;
-        //         echo $result['Username'];
-        //     }
-        
-        //     return $usersList;
-        // }
-        
-        
     }
 ?>
