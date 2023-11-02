@@ -4,7 +4,38 @@
   <section class="content">
 
     <body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    New Invoice
+    </button>
+
+    <!-- El modal -->
+    <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+        <!-- Encabezado del modal -->
+        <div class="modal-header">
+            <h4 class="modal-title">Título del modal</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Cuerpo del modal -->
+        <div class="modal-body">
+            <p>Este es el contenido del modal.</p>
+        </div>
+
+        <!-- Pie del modal -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
     <div class="barra-superior-derecha">
+        
         <label for="dato"></label>
         <input type="text" id="dato" name="dato">
         <button type="button ">Search</button>

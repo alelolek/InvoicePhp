@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AdminLTE 2 | Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="../Plantilla/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Plantilla/bower_components/font-awesome/css/font-awesome.min.css">
@@ -76,7 +79,7 @@
                         </a>
                     </li>
                     <li class="treeview">
-                        <a href="#">
+                        <a href="Login.php">
                             <i class="fa fa-share"></i> <span>Sign off</span>
                         </a>
                     </li>
