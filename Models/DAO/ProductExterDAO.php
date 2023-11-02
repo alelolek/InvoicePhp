@@ -2,7 +2,7 @@
 <?php
 require_once '../Models/ConnectionDB.php';
 
-class InvoiceDAO {
+class ProductExterDAO {
     private $connection = null;
 
     public function __construct() {
@@ -11,9 +11,9 @@ class InvoiceDAO {
 
     public function obtenerProductoExternoPorNombre($nombreProductoExterno)
     {
-        $query = "SELECT id, description, price FROM ProductsExternos WHERE description = :nombreProductoExterno";
+        $query = "SELECT * FROM PRODUCT_F WHERE description = :description";
         $stmt = $this->connection->prepare($query);
-        $stmt->bindParam(':nombreProductoExterno', $nombreProductoExterno);
+        $stmt->bindParam(':description', $nombreProductoExterno);
         $stmt->execute();
 
         $productoExterno = null;
@@ -21,8 +21,9 @@ class InvoiceDAO {
         if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $productoExterno = new stdClass();//crear clases genericas
             $productoExterno->id = $row['id'];
+            $productoExterno->code = $row['code'];
             $productoExterno->description = $row['description'];
-            $productoExterno->price = $row['price'];
+            $productoExterno->price = $row['unitPrice'];
         }
 
         return $productoExterno;
