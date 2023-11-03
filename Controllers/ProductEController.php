@@ -1,14 +1,10 @@
 
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    if (isset($_GET['obtenerCliente']) && $_GET['producto'] === 'Todos') {
-        require_once '../Models/DAO/ProductExterDAO.php';
+if (isset($_GET['obtenerCliente']) && $_GET['obtenerProduct'] === 'id') {
+    require_once '../Models/DAO/ProductExterDAO.php';
 
-        $productDAO = new ProductExterDAO();
-
-        $productE = $ProductDAO->obtenerProductoExternoPorNombre();
-
-        echo json_encode($productE);
-    }
+    $clientDAO = new ClientDAO();
+    $clients = $clientDAO->obtenerPorId($_GET['id']);
+    echo json_encode($clients);
 }
         ?>
